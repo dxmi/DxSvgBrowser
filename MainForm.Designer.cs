@@ -28,21 +28,21 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumnIcon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumnIcon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumnName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -94,6 +94,25 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumnIcon
+            // 
+            this.gridColumnIcon.Caption = "[]";
+            this.gridColumnIcon.FieldName = "Icon";
+            this.gridColumnIcon.Name = "gridColumnIcon";
+            this.gridColumnIcon.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.gridColumnIcon.Visible = true;
+            this.gridColumnIcon.VisibleIndex = 0;
+            this.gridColumnIcon.Width = 33;
+            // 
+            // gridColumnName
+            // 
+            this.gridColumnName.Caption = "Name";
+            this.gridColumnName.FieldName = "Name";
+            this.gridColumnName.Name = "gridColumnName";
+            this.gridColumnName.Visible = true;
+            this.gridColumnName.VisibleIndex = 1;
+            this.gridColumnName.Width = 659;
             // 
             // layoutControlGroup1
             // 
@@ -160,6 +179,13 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Root";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
             // bar2
             // 
             this.bar2.BarName = "Main menu";
@@ -169,6 +195,7 @@
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
+            this.bar2.Visible = false;
             // 
             // bar3
             // 
@@ -181,6 +208,7 @@
             this.bar3.OptionsBar.DrawDragBorder = false;
             this.bar3.OptionsBar.UseWholeRow = true;
             this.bar3.Text = "Status bar";
+            this.bar3.Visible = false;
             // 
             // barDockControlTop
             // 
@@ -213,32 +241,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(850, 49);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 420);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Root";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
-            // 
-            // gridColumnIcon
-            // 
-            this.gridColumnIcon.Caption = "[]";
-            this.gridColumnIcon.FieldName = "Icon";
-            this.gridColumnIcon.Name = "gridColumnIcon";
-            this.gridColumnIcon.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumnIcon.Visible = true;
-            this.gridColumnIcon.VisibleIndex = 0;
-            this.gridColumnIcon.Width = 33;
-            // 
-            // gridColumnName
-            // 
-            this.gridColumnName.Caption = "Name";
-            this.gridColumnName.FieldName = "Name";
-            this.gridColumnName.Name = "gridColumnName";
-            this.gridColumnName.Visible = true;
-            this.gridColumnName.VisibleIndex = 1;
-            this.gridColumnName.Width = 659;
             // 
             // MainForm
             // 

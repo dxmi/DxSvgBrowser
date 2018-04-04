@@ -36,9 +36,15 @@ namespace SvgBrowser {
         }
 
         void gridControl1_KeyUp(object sender, KeyEventArgs e) {
-            if(e.KeyCode == Keys.Enter) {
-                e.Handled = true;
-                GoDown();
+            switch(e.KeyCode) {
+                case Keys.Enter:
+                    e.Handled = true;
+                    GoDown();
+                    break;
+                case Keys.Back:
+                    e.Handled = true;
+                    GoUp();
+                    break;
             }
         }
 
@@ -49,6 +55,18 @@ namespace SvgBrowser {
                 parent = directoryInfo;
                 RefreshFileList();
             }
+        }
+
+        void GoUp() {
+            if(parent == null)
+                return;
+            parent = parent.Parent;
+            RefreshFileList();
+        }
+
+        void GoRoot() {
+            parent = null;
+            RefreshFileList();
         }
 
         void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e) {
@@ -74,15 +92,11 @@ namespace SvgBrowser {
         }
 
         void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
-            if(parent == null)
-                return;
-            parent = parent.Parent;
-            RefreshFileList();
+            GoUp();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
-            parent = null;
-            RefreshFileList();
+            GoRoot();
         }
 
         void RefreshFileList() {
